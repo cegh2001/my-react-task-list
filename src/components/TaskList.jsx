@@ -1,23 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import Task from "./Task";
 
-const TaskList = ({ tasks }) => {
-  const [taskList, setTaskList] = useState(tasks);
-
-  const updateTaskStatus = (taskId, completed) => {
-    const updatedTasks = taskList.map((task) =>
-      task.id === taskId ? { ...task, completed } : task
-    );
-
-    setTaskList(updatedTasks);
-  };
-
+const TaskList = ({ tasks, deleteTask, updateTask }) => {
   return (
     <div className="task-list">
-      <h2>Task List</h2>
+      <h2>Lista de Tareas</h2>
       <ul>
-        {taskList.map((task) => (
-          <Task key={task.id} task={task} updateTaskStatus={updateTaskStatus} />
+        {tasks.map((task) => (
+          <Task
+            key={task.id}
+            task={task}
+            deleteTask={deleteTask}
+            updateTask={updateTask}
+          />
         ))}
       </ul>
     </div>
