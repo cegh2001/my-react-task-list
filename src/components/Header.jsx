@@ -12,7 +12,8 @@ const Header = ({ addTask }) => {
     setNewTaskDescr(e.target.value);
   };
 
-  const handleAddTask = () => {
+  const handleAddTask = (e) => {
+    e.preventDefault(); // Evita que el formulario recargue la página
     if (newTaskTitle.trim() !== "") {
       addTask({ title: newTaskTitle, descr: newTaskDescr, completed: false });
       setNewTaskTitle("");
@@ -23,7 +24,7 @@ const Header = ({ addTask }) => {
   return (
     <div className="header">
       <h1>TaskC</h1>
-      <div>
+      <form onSubmit={handleAddTask}>
         <input
           type="text"
           placeholder="Nuevo título"
@@ -36,8 +37,8 @@ const Header = ({ addTask }) => {
           value={newTaskDescr}
           onChange={handleDescrChange}
         />
-        <button onClick={handleAddTask}>Agregar Tarea</button>
-      </div>
+        <button type="submit">Agregar Tarea</button>
+      </form>
     </div>
   );
 };

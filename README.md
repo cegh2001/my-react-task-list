@@ -33,3 +33,5 @@ Importancia: Garantiza que los usuarios conserven sus tareas incluso después de
 Interfaz de Usuario Clara y Simple:
 Función: Presenta una interfaz fácil de entender y utilizar.
 Importancia: Una interfaz intuitiva y amigable facilita que los usuarios gestionen sus tareas de manera eficiente, sin complicaciones.
+
+Ahora con un codigo mas limpio.
