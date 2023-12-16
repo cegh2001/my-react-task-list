@@ -23,13 +23,13 @@ const Header = ({ addTask }) => {
   };
 
   return (
-    <Flex // Reemplaza el div por un Flex
+    <Flex 
       className="header"
-      bg="black" // Añade un color de fondo
-      color="white" // Añade un color de texto
-      p="4" // Añade un relleno
-      align="center" // Alinea los elementos verticalmente
-      justify="space-around " // Distribuye los elementos horizontalmente
+      bg="black" 
+      color="white" 
+      p="4" 
+      align="center" 
+      justify="space-around " 
     >
       <Heading as="h1" size="lg" >
         TaskC
@@ -40,19 +40,19 @@ const Header = ({ addTask }) => {
           placeholder="Nuevo título"
           value={newTaskTitle}
           onChange={handleTitleChange}
-          mr="2" // Añade un margen a la derecha
+          mr="2" 
         />
-        <Input // Reemplaza el input por un Input
+        <Input 
           type="text"
           placeholder="Nueva descripción"
           value={newTaskDescr}
           onChange={handleDescrChange}
-          mr="2" // Añade un margen a la derecha
+          mr="2" 
         />
         <Button 
           type="submit"
-          colorScheme="white" // Añade un esquema de color
-          variant="outline" // Añade una variante de estilo
+          colorScheme="white" 
+          variant="outline" 
         >
           Agregar Tarea
         </Button>

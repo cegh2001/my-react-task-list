@@ -6,28 +6,28 @@ const TaskList = ({ tasks, deleteTask, updateTask }) => {
   return (
     <Flex 
       className="task-list"
-      bg="black" // Añade un color de fondo
-      color="white" // Añade un color de letra
-      height= "100vh" // Establece la altura del elemento
-      p="4" // Añade un relleno
-      direction="column" // Establece la dirección de los elementos
-      align="center" // Alinea los elementos horizontalmente
+      bg="black" 
+      color="white" 
+      height= "100vh" 
+      p="4" 
+      direction="column" 
+      align="center" 
     >
       <Heading as="h2" size="lg" mb="4">
         {" "}
         Lista de
         Tareas
       </Heading>
-      <UnorderedList // Reemplaza el ul por un UnorderedList
-        w="80%" // Establece el ancho del elemento
-        spacing="2" // Añade un espaciado entre los elementos
+      <UnorderedList 
+        w="80%" 
+        spacing="2" 
       >
         {tasks.map((task) => (
-          <ListItem // Reemplaza el li por un ListItem
+          <ListItem 
             key={task.id}
-            p="2" // Añade un relleno
-            border="1px solid gray" // Añade un borde
-            borderRadius="md" // Añade un radio de borde
+            p="2" 
+            border="1px solid gray" 
+            borderRadius="md" 
           >
             <Task task={task} deleteTask={deleteTask} updateTask={updateTask} />
           </ListItem>

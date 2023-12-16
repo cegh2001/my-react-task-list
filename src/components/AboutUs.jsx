@@ -3,13 +3,13 @@ import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 
 const AboutUs = () => {
   return (
-    <Box // Reemplaza el div por un Box
+    <Box 
       className="about-us"
       height="100vh"
       width="216vh"
-      bg="black" // Añade un color de fondo
-      color="white" // Añade un color de texto
-      p="4" // Añade un relleno
+      bg="black" 
+      color="white" 
+      p="4" 
       align="center"
       justify="center"
     >
